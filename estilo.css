@@ -208,8 +208,10 @@ img{
 
 /* PESQUISA */
 
+#pesquisa{
+    background: #fff;
+}
 #container-pesquisa{
-    
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
