@@ -10,7 +10,7 @@
 }
 
 body, html{
-    background: #fff;
+    background: #f5f6f8;
     color: #fff;
     line-height: 1.5;
     font-size: 1em;
@@ -61,6 +61,7 @@ img{
 /* CABEÇALHO */
 
 #cabecalho{
+    background: rgba(15, 23, 42, 0.3);
     backdrop-filter: saturate(1.05) blur(6px);
     position: fixed;
     top: 0;
@@ -159,7 +160,6 @@ img{
     text-align: start;
     border-radius: 20px;
     padding: 40px 50px;
-    background: #f5f6f8;
     color: #000;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
 }
@@ -183,17 +183,10 @@ img{
 }
 #container-equipe{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10em;
-}
-#area-conteudo-equipe{
-    display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 5em;
-    padding: 0 100px;
+    gap: 10em;
 }
 .membro-equipe{
     min-width: 200px;
@@ -215,38 +208,36 @@ img{
 
 /* PESQUISA */
 
-#pesquisa{
-    background: #0f172a;
-}
 #container-pesquisa{
+    
     display: flex;
-    flex-direction: column;
-    gap: 10em;
-}
-#area-conteudo-pesquisa{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    justify-content: space-between;
     flex-wrap: nowrap;
 }
 .conteudo-pesquisa{
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    overflow: hidden;
     width: 300px;
     height: 300px;
-    margin: 30px;
     border-radius: 20px;
-    transition: all 0.5s ease;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(133, 133, 133, 0.142);
+    margin: 10px;
 }
-.conteudo-pesquisa:hover{
+.conteudo-pesquisa img{
+    transition: all 1s ease;
+    object-fit: cover;
+}
+.conteudo-pesquisa:hover img{
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
-    transform: translateY(-10px) scale(1.05);
+    transform: scale(1.2);
+}
+.conteudo-pesquisa div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
 }
 .conteudo-pesquisa h3{
     font-size: 1.5rem;
@@ -254,31 +245,12 @@ img{
 .conteudo-pesquisa p{
     color: #d6d7d7e7;
 }
-#pesquisa1{
-    background-image: url(img/fundo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#pesquisa2{
-    background-image: url(img/fundo2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#pesquisa3{
-    background-image: url(img/fundo3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 
 /* PROJETOS */
 
 #projetos{
     display: flex;
     align-items: center;
-    background: #f5f6f8;
 }
 
 #container-projetos{
@@ -290,7 +262,6 @@ img{
 .card-wrapper{
     max-width: 1100px;
     margin: 0 60px 35px;
-    padding: 20px 10px;
     overflow: hidden;
 }
 
@@ -303,10 +274,9 @@ img{
     display: block;
     background: #fff;
     padding: 18px;
-    border-radius: 12px;
+    border-radius: 20px;
     text-decoration: none;
     border: 2px solid transparent;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
     transition: 0.2s ease;
 }
 
@@ -460,11 +430,15 @@ img{
     }
     #container-pesquisa{
         gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
     }
-    #area-conteudo-pesquisa{
-        flex-wrap: wrap;
+    .conteudo-pesquisa{
+        width: 100%;   
     }
-
+    #container-equipe{
+        gap: 5em;
+    }
     .card-wrapper{
         margin: 0 10px 25px;
     }
