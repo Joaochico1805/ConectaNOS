@@ -422,6 +422,9 @@ img{
     #area-logo{
         display: none;
     }
+    #area-menu ul{
+        gap: 5px;
+    }
     #inicio, #equipe{
         background-attachment: local;
     } 
