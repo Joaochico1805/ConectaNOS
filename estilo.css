@@ -416,6 +416,9 @@ img{
     body{
         font-size: 0.8rem;
     }
+    #cabecalho .container{
+        width: 100%;
+    }
     #area-logo{
         display: none;
     }
